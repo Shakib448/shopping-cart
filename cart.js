@@ -48,7 +48,7 @@ function addProduct(id, priceId, price) {
     const totalAmount = subTotal - tax;
     document.getElementById('totalAmount').innerText = totalAmount;
 
-}
+};
 
 //Remove Product Function 
 function removeProduct(id, priceId, price) {
@@ -75,10 +75,11 @@ function removeProduct(id, priceId, price) {
     let tax = (subTotal / 100) * 5;
     tax = tax.toFixed(2)
     document.getElementById('tax').innerText = tax;
-    const totalAmount = subTotal - tax;
     document.getElementById('totalAmount').innerText = totalAmount;
+    const totalAmount = subTotal - tax;
 
-}
+};
+
 
 
 //sub total
