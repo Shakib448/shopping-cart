@@ -1,33 +1,23 @@
-// Iphone function 
+// Product function 
 
-function handleIphoneProductChange(isIncrease){
-    const iphoneInput = document.getElementById('iphone-count');
-    const iphoneCount = parseInt(iphoneInput.value);
-    let iphoneNewCount = iphoneCount;
+function handleProductChange(product, isIncrease){
+    const productInput = document.getElementById(product + '-count');
+    const productCount = parseInt(productInput.value);
+    let caseNewCount = productCount;
     if(isIncrease == true){
-        iphoneNewCount = iphoneCount + 1;
+        productNewCount = productCount + 1;
     }
-    if(isIncrease == false && iphoneCount > 0){
-        iphoneNewCount = iphoneCount -1;
+    if(isIncrease == false && productCount > 0){
+        productNewCount = productCount -1;
     }
-    iphoneInput.value = iphoneNewCount;
-    const totalIphone = iphoneNewCount * 1219;
-    document.getElementById('iphone-total').innerText = totalIphone;
-}
+    productInput.value = productNewCount;
+    let productTotal = 0;
 
-// Case function 
-
-function handleCaseProductChange(isIncrease){
-    const caseInput = document.getElementById('case-count');
-    const caseCount = parseInt(caseInput.value);
-    let caseNewCount = caseCount;
-    if(isIncrease == true){
-        caseNewCount = caseCount + 1;
+    if(product == 'iphone'){
+        productTotal = productNewCount * 1219;
     }
-    if(isIncrease == false && caseCount > 0){
-        caseNewCount = caseCount -1;
+    if(product == 'case'){
+        productTotal = productNewCount * 59;
     }
-    caseInput.value = caseNewCount;
-    const caseTotal = caseNewCount * 59;
-    document.getElementById('case-total').innerText = caseTotal;
+    document.getElementById(product + '-total').innerText = productTotal;
 };
