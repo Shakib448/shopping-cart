@@ -1,7 +1,5 @@
 // Iphone Increase 
-var iphoneIncrease = document.getElementById('iphone-increase');
-
-iphoneIncrease.addEventListener('click', function(){
+document.getElementById('iphone-increase').addEventListener('click', function(){
     const iphoneInput = document.getElementById('iphone-count');
     const iphoneCount = parseInt(iphoneInput.value);
     const iphoneNewCount = iphoneCount + 1;
@@ -11,9 +9,7 @@ iphoneIncrease.addEventListener('click', function(){
 });
 
 // Iphone Decrease 
-var iphoneIncrease = document.getElementById('iphone-decrease');
-
-iphoneIncrease.addEventListener('click', function(){
+document.getElementById('iphone-decrease').addEventListener('click', function(){
     const iphoneInput = document.getElementById('iphone-count');
     const iphoneCount = parseInt(iphoneInput.value);
     const iphoneNewCount = iphoneCount - 1;
@@ -22,10 +18,8 @@ iphoneIncrease.addEventListener('click', function(){
     document.getElementById('iphone-total').innerText = totalIphone;
 });
 
-// Case Increase 
-var caseIncrease = document.getElementById('case-increase');
-
-caseIncrease.addEventListener('click', function(){
+// Case Increase
+document.getElementById('case-increase').addEventListener('click', function(){
     const caseInput = document.getElementById('case-count');
     const caseCount = parseInt(caseInput.value);
     const caseNewCount = caseCount + 1;
@@ -34,11 +28,9 @@ caseIncrease.addEventListener('click', function(){
     document.getElementById('case-total').innerText = caseTotal;
 });
 
-// Case Decrease 
+ // Case Decrease 
 
-var caseDecrease = document.getElementById('case-decrease');
-
-caseDecrease.addEventListener('click', function(){
+document.getElementById('case-decrease').addEventListener('click', function(){
     const caseInput = document.getElementById('case-count');
     const caseCount = parseInt(caseInput.value);
     const caseNewCount = caseCount - 1;
