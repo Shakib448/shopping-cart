@@ -1,40 +1,33 @@
-// Iphone Increase 
-document.getElementById('iphone-increase').addEventListener('click', function(){
+// Iphone function 
+
+function handleIphoneProductChange(isIncrease){
     const iphoneInput = document.getElementById('iphone-count');
     const iphoneCount = parseInt(iphoneInput.value);
-    const iphoneNewCount = iphoneCount + 1;
+    let iphoneNewCount = iphoneCount;
+    if(isIncrease == true){
+        iphoneNewCount = iphoneCount + 1;
+    }
+    if(isIncrease == false && iphoneCount > 0){
+        iphoneNewCount = iphoneCount -1;
+    }
     iphoneInput.value = iphoneNewCount;
     const totalIphone = iphoneNewCount * 1219;
     document.getElementById('iphone-total').innerText = totalIphone;
-});
+}
 
-// Iphone Decrease 
-document.getElementById('iphone-decrease').addEventListener('click', function(){
-    const iphoneInput = document.getElementById('iphone-count');
-    const iphoneCount = parseInt(iphoneInput.value);
-    const iphoneNewCount = iphoneCount - 1;
-    iphoneInput.value = iphoneNewCount;
-    const totalIphone = iphoneNewCount * 1219;
-    document.getElementById('iphone-total').innerText = totalIphone;
-});
+// Case function 
 
-// Case Increase
-document.getElementById('case-increase').addEventListener('click', function(){
+function handleCaseProductChange(isIncrease){
     const caseInput = document.getElementById('case-count');
     const caseCount = parseInt(caseInput.value);
-    const caseNewCount = caseCount + 1;
+    let caseNewCount = caseCount;
+    if(isIncrease == true){
+        caseNewCount = caseCount + 1;
+    }
+    if(isIncrease == false && caseCount > 0){
+        caseNewCount = caseCount -1;
+    }
     caseInput.value = caseNewCount;
     const caseTotal = caseNewCount * 59;
     document.getElementById('case-total').innerText = caseTotal;
-});
-
- // Case Decrease 
-
-document.getElementById('case-decrease').addEventListener('click', function(){
-    const caseInput = document.getElementById('case-count');
-    const caseCount = parseInt(caseInput.value);
-    const caseNewCount = caseCount - 1;
-    caseInput.value = caseNewCount;
-    const caseTotal = caseNewCount * 59;
-    document.getElementById('case-total').innerText = caseTotal;
-});
+};
