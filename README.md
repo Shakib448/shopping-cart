@@ -1,1 +1,1 @@
-"# shopping-cart" 
+<img src="images/javascript-shopping-cart.png">
